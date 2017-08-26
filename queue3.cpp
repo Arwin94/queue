@@ -16,7 +16,7 @@ Node *newnode(int x)
     q->next=NULL;
     return(q);
 }
- 
+ // Insertion
 void enqueue(Node *eq)
 {
     if(front==NULL)
@@ -36,7 +36,7 @@ void enqueue(Node *eq)
         
     }
 }
- 
+// Deletion 
 void dequeue(){
     if(front==NULL){
         cout<<"Queue is empty!!";
@@ -45,13 +45,11 @@ void dequeue(){
     	p=front;
     	front=front->next;
        cout<<"Deleted element is "<<p->data;
-       // p=top;
-       // top=top->next;
-        delete(p);
-       // showQueue();
+      delete(p);
+      
     }
 }
- 
+ // Display
 void showQueue()
 {
     Node *eq;
